@@ -1,6 +1,9 @@
 function computeFactorialOfN(n) {
-    // your code here
-    
+    let result = 1; //starts at 1
+    for (let e = 1; e < n + 1; e++){
+        result *= e;
+    }
+    return result;
 }
 
 let output = computeFactorialOfN(4);

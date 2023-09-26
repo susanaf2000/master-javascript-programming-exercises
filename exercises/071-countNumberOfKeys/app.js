@@ -8,8 +8,11 @@ let obj = {
 }
 
 function countNumberOfKeys(obj) {
-    // your code here
-   
+    let count = 0;
+    for (let key in obj) {
+        ++count;
+    }
+    return count
 }
 
 let output = countNumberOfKeys(obj);
