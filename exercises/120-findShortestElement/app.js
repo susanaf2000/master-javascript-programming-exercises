@@ -1,6 +1,12 @@
 function findShortestElement(arr) {
-    // your code here
-
+    if(arr.length === 0) return '';
+    let shortest = 'aaaaaaaaaaab';
+    for (let i of arr){
+        if(i.length < shortest.length){
+            shortest = i;
+        }
+    }
+    return shortest;
 }
 
 let output = findShortestElement(['a', 'two', 'three']);

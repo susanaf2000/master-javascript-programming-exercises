@@ -1,6 +1,14 @@
 function flipPairs(input) {
-    // your code here
-    
+    let flipped = '';
+
+    for(let i=  0; i < input.length; i+= 2) {
+        if(i + 1 < input.length) {
+            flipped += input[i +1] + input[i];
+        } else {
+            flipped += input[i];
+        }
+    }
+    return flipped;
 }
 
 let input = "Can you see what this is about?";
