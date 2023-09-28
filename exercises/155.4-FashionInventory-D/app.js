@@ -18,8 +18,28 @@ let currentInventory = [
 ];
 
 function getLaceNameDataForShoes(inventory) {
-    // your code here
-    
+  let result = [];
+
+  inventory.forEach((designer) => {
+    designer.shoes.forEach((shoe) => {
+      let nameWords = shoe.name.split(' ');
+
+      let targetWordIndex = -1;
+
+      for(let i = 0; i < nameWords.length; i++) {
+        if(nameWords[i].includes('lace') || nameWords[i].includes('laced')) {
+          targetWordIndex = i;
+          break; 
+        }
+      }
+
+      if(targetWordIndex !== -1) {
+        result.push({nameWords, targetWordIndex });
+      }
+    });
+  });
+
+  return result;
 }
 
 console.log(getLaceNameDataForShoes(currentInventory));

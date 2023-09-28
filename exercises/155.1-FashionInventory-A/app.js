@@ -18,10 +18,8 @@ let currentInventory = [
 ];
 
 function renderInventory(inventory) {
-    // your code here
-    // hint: before you just dive into coding...
-    // it's a good idea to sketch out a skeleton like you've been seeing earlier in this module...
-    
+  return inventory.flatMap((person) => 
+  person.shoes.map((shoe) =>[person.name, shoe.name, shoe.price]));
 }
 
 console.log(renderInventory(currentInventory))
